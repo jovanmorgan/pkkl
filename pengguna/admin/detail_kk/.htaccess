@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /pkkl/pengguna/admin/detail_kk/
+
+# Menghapus ekstensi .php dari URL
+RewriteCond %{REQUEST_FILENAME} !-ds
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
